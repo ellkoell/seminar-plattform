@@ -1,4 +1,9 @@
 <x-layout title="Home">
-<h1>Hello, World!</h1>
+
+    <h1>Home</h1>
+
+    <div>
+        <p>Hello from the home page.</p>
+    </div>
 
 </x-layout>

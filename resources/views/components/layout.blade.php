@@ -10,8 +10,23 @@
     <title>{{ $title }}</title>
 
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
         nav > a {
             color: blue;
+            margin-right: 12px;
+            text-decoration: none;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
