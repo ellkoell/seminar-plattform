@@ -8,6 +8,12 @@
 <body>
 <h1>Hello, World!</h1>
 
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+</nav>
+
 <div>
     <a href="/about">About us</a>
 </div>
