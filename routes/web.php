@@ -2,7 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome');
+Route::get('/', function () {
+    return view('welcome',
+        [
+            'greeting' => 'Greetings',
+            'person' => request('person','World'),
+            'tasks' => [],
+        ]
+    );
+});
 
-Route::view('/about', 'about');
-Route::view('/contact', 'contact');
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::view('/contact','contact');
