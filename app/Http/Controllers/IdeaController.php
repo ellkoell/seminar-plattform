@@ -55,11 +55,7 @@ class IdeaController extends Controller
     public function show(Idea $idea)
     {
         Gate::authorize('update', $idea);
-//        Auth::user()->can('update', $idea);
-//        if(Auth::user()->cannot('update', $idea)){
-//            dd('not authorized');
-//        }
-//        return view('ideas.show', ['idea' => $idea]);
+        return view('ideas.show', ['idea' => $idea]);
     }
 
     /**
@@ -67,6 +63,7 @@ class IdeaController extends Controller
      */
     public function edit(Idea $idea)
     {
+        Gate::authorize('update', $idea);
         Gate::authorize('update', $idea);
         return view('ideas.edit', ['idea' => $idea]);
     }
@@ -76,6 +73,8 @@ class IdeaController extends Controller
      */
     public function update(IdeaRequest $request, Idea $idea)
     {
+        Gate::authorize('update', $idea);
+
         Gate::authorize('update', $idea);
 
         $idea->update(request(['description', 'state']));
