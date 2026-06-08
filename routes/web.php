@@ -5,7 +5,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\SessionsController;
 use App\Http\Controllers\IdeaController;
 use Illuminate\Support\Facades\Route;
-//Route::redirect('/', '/ideas');
+Route::redirect('/', '/ideas');
 
 Route::middleware('auth')->group(function () {
     Route::get('/ideas', [IdeaController::class, 'index'])->name('ideas.index')->middleware('auth');
@@ -25,8 +25,4 @@ Route::middleware('guest')->group(function () {
 
     Route::get('/login',[SessionsController::class,'create'])->name('login');
     Route::post('/login',[SessionsController::class,'store']);
-});
-
-Route::get('/admin', function () {
-    return 'Private Admin only Area!';
 });
