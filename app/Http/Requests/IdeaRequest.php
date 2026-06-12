@@ -22,7 +22,7 @@ class IdeaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'description' => ['required','min:2']
+            'description' => ['required','min:2'] //beschreibung muss vorhanden sein, min 2 zeichen
         ];
     }
 

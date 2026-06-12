@@ -12,7 +12,7 @@ class IdeaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index() //alle ideen anzeigen
     {
         return view('ideas.index',[
             'ideas' => \Auth::user()->ideas,
@@ -27,7 +27,7 @@ class IdeaController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create() //formular anzeigen
     {
         Gate::authorize('create', Idea::class);
 
@@ -37,7 +37,7 @@ class IdeaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(IdeaRequest $request)
+    public function store(IdeaRequest $request) //neue idee anzeigen
     {
         \Auth::user()->ideas()->create([
             'description' => request('description'),
@@ -52,7 +52,7 @@ class IdeaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Idea $idea)
+    public function show(Idea $idea) //idee anzeigen
     {
         Gate::authorize('update', $idea);
         return view('ideas.show', ['idea' => $idea]);
@@ -61,7 +61,7 @@ class IdeaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Idea $idea)
+    public function edit(Idea $idea) //bearbeitungsformular
     {
         Gate::authorize('update', $idea);
         Gate::authorize('update', $idea);
@@ -71,7 +71,7 @@ class IdeaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(IdeaRequest $request, Idea $idea)
+    public function update(IdeaRequest $request, Idea $idea) //änderung speichern
     {
         Gate::authorize('update', $idea);
 
@@ -84,7 +84,7 @@ class IdeaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Idea $idea)
+    public function destroy(Idea $idea) //idee löschen
     {
         Gate::authorize('update', $idea);
 
