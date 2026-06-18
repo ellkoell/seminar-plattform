@@ -12,7 +12,8 @@
         </div>
 
         <div class="mt-6 flex items-center gap-x-6">
-            <button type="submit" class="rounded-md bg-amber-950 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-amber-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700">Save</button>
+            <!--<button type="submit" class="rounded-md bg-amber-950 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-amber-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700">Save</button>-->
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
     </form>
 </x-layout>
