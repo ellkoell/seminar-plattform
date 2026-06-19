@@ -7,7 +7,7 @@
             <label class="label">Name</label>
             <input class="input" name="name" placeholder="Your Name" required/>
 
-            <label class="label">Name</label>
+            <label class="label">E-Mail</label>
             <input type="email" name="email" class="input" placeholder="Your E-mail" required/>
 
             <label class="label">Password</label>
