@@ -32,7 +32,7 @@ class SessionsController extends Controller
         if(Auth::attempt($validated)) {
             $request->session()->regenerate();
             // redirect
-            return redirect('/ideas');
+            return redirect('/dashboard');
         }
 
         return back()->withErrors([
