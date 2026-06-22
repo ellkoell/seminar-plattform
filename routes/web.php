@@ -1,13 +1,22 @@
 <?php
 
-//für einen commit
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\SessionsController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect('/register');
+    if (auth()->check()) {
+        return redirect('/dashboard');
+    }
+
+    return redirect('/login');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
 });
 
 //Route::middleware('auth')->group(function () {
