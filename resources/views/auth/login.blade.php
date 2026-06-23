@@ -1,5 +1,15 @@
 <x-layout>
     <form action="/login", method="POST">
+
+
+        @if (session('success'))
+            <div class="alert alert-success mb-4">
+                {{ session('success') }}
+            </div>
+        @endif
+
+
+
         @csrf
         <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 mx-auto">
             <legend class="fieldset-legend">Login</legend>

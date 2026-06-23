@@ -32,8 +32,9 @@ class RegisteredUserController extends Controller
         // Log the user in
         Auth::login($user);
 
-        // redirect
-        return redirect('/ideas');
+        dd('registrierung erfolgreich');
 
+        return redirect('/dashboard')
+            ->with('success', 'Registrierung erfolgreich! Willkommen bei SemiFlow.');
     }
 }
