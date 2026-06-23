@@ -9,11 +9,16 @@ Route::get('/', function () {
     return redirect('/dashboard');
 });
 
+// Bereich für eingeloggte User
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+
+    Route::delete('/logout', [SessionsController::class, 'destroy']);
 });
+
 
 //Route::middleware('auth')->group(function () {
 //    Route::get('/ideas', [IdeaController::class, 'index'])->name('ideas.index')->middleware('auth');
@@ -23,10 +28,9 @@ Route::middleware('auth')->group(function () {
 //    Route::get('/ideas/{idea}/edit',[IdeaController::class, 'edit'])->name('ideas.edit');
 //    Route::patch('/ideas/{idea}',[IdeaController::class, 'update']);
 //    Route::delete('/ideas/{idea}',[IdeaController::class, 'destroy']);
-//
-//Route::delete('/logout', [SessionsController::class, 'destroy']);
 //});
 
+// Bereich für guests
 Route::middleware('guest')->group(function () {
     Route::get('/register',[RegisteredUserController::class,'create']);
     Route::post('/register',[RegisteredUserController::class,'store']);

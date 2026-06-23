@@ -7,6 +7,11 @@
                 </svg>
             </div>
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+
+
+                <a href="/" class="btn btn-ghost px-2">
+                    <img src="{{ asset('logo.png') }}" alt="Logo" class="h-10 w-auto object-contain">
+                </a>
                 <li><a href="/">Home</a></li>
                 @auth
                     <li><a href="/dashboard">Seminarübersicht</a></li>
