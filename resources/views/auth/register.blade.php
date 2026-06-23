@@ -13,6 +13,10 @@
             <label class="label">Password</label>
             <input type="password" name="password" class="input" placeholder="Password" required/>
 
+
+            @error('password')
+            <div class="text-error text-sm mt-1">{{ $message }}</div>
+            @enderror
             <button class="btn btn-neutral mt-4">Register</button>
         </fieldset>
     </form>
