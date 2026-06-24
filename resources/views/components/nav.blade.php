@@ -1,4 +1,5 @@
 <div class="navbar bg-base-100 shadow-sm">
+
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -8,10 +9,10 @@
             </div>
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
 
-
-                <a href="/" class="btn btn-ghost px-2">
-                    <img src="{{ asset('logo.png') }}" alt="Logo" class="h-10 w-auto object-contain">
+                <a href="/dashboard" class="btn btn-ghost px-2 min-h-[64px] h-auto">
+                    <img src="{{ Vite::asset('resources/js/Pictures/logo.png') }}" alt="Logo" class="h-30 w-30 rounded-full object-cover" />
                 </a>
+
                 <li><a href="/">Home</a></li>
                 @auth
                     <li><a href="/dashboard">Seminarübersicht</a></li>
@@ -21,7 +22,10 @@
                 @endcan
             </ul>
         </div>
-        <a href="/" class="btn btn-ghost text-xl">SemiFlow</a>
+
+        <a href="/" class="btn btn-ghost px-2 min-h-[64px] h-auto">
+            <img src="{{ Vite::asset('resources/js/Pictures/logo.png') }}" alt="Logo" class="h-30 w-30 rounded-full object-cover" />
+        </a>
     </div>
 
     <div class="navbar-center hidden lg:flex">
