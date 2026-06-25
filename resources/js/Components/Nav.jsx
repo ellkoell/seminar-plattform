@@ -24,7 +24,7 @@ export default function Nav() {
                     <img
                         src={logo}
                         alt="Logo"
-                        className="h-30 w-30 rounded-full object-cover"
+                        className="h-20 "
                     />
                 </a>
             </div>

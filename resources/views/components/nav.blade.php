@@ -24,7 +24,7 @@
         </div>
 
         <a href="/" class="btn btn-ghost px-2 min-h-[64px] h-auto">
-            <img src="{{ Vite::asset('resources/js/Pictures/logo.png') }}" alt="Logo" class="h-30 w-30 rounded-full object-cover" />
+            <img src="{{ Vite::asset('resources/js/Pictures/logo.png') }}" alt="Logo" class="h-20" />
         </a>
     </div>
 
