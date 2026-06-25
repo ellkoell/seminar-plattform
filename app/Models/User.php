@@ -53,4 +53,14 @@ class User extends Authenticatable
     public function isAdmin(): bool{
         return $this->role == 'admin'; //Only John is an Admin.
     }
+
+    public function registrations()
+    {
+        return $this->hasMany(Registration::class);
+    }
+
+    public function registeredSeminars()
+    {
+        return $this->belongsToMany(Seminar::class, 'registrations');
+    }
 }
