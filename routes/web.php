@@ -14,7 +14,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
-
+    Route::get('/seminare', [App\Http\Controllers\SeminarController::class, 'index'])->name('seminare.index');
 
     Route::delete('/logout', [SessionsController::class, 'destroy']);
 });
