@@ -8,7 +8,7 @@ class SeminarController extends Controller
 {
     public function index()
     {
-        // Rendert die Datei "Seminare/Index.jsx" im Pages-Ordner
-        return Inertia::render('Seminare/Index');
+        // Rendert die Datei "Seminare/Seminare.jsx" im Pages-Ordner
+        return Inertia::render('Seminare/Seminare');
     }
 }
