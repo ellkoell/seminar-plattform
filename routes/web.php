@@ -9,6 +9,12 @@ Route::get('/', function () {
     return redirect('/dashboard');
 });
 
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard', [
+        'upcomingSeminars' => \App\Models\Seminar::orderBy('date')->take(3)->get(),
+    ]);
+})->name('dashboard');
+
 // Bereich für eingeloggte User
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
@@ -38,3 +44,7 @@ Route::middleware('guest')->group(function () {
     Route::get('/login',[SessionsController::class,'create'])->name('login');
     Route::post('/login',[SessionsController::class,'store']);
 });
+
+Route::get('/seminare', [App\Http\Controllers\SeminarController::class, 'index'])->name('seminare.index');
+Route::get('/seminare/create', [App\Http\Controllers\SeminarController::class, 'create'])->name('seminare.create');
+Route::post('/seminare', [App\Http\Controllers\SeminarController::class, 'store'])->name('seminare.store');
