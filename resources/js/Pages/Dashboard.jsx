@@ -14,7 +14,7 @@ export default function Dashboard({ upcomingSeminars = [] }) {
                 />
 
                 <h1 className="text-3xl font-bold">
-                    Willkommen bei SemiFlow 🍓✨
+                    Willkommen bei SemiFlow
                 </h1>
 
                 <p className="mt-4">

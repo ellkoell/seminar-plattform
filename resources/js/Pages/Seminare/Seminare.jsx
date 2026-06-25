@@ -44,10 +44,10 @@ export default function Seminare({ seminars = [] }) {
                                 <h2 className="text-xl font-bold">{seminar.title}</h2>
                                 <p className="mt-2">{seminar.description}</p>
                                 <p className="mt-3 font-semibold">
-                                    📅 {seminar.date} {seminar.time}
+                                    Datum: {seminar.date} {seminar.time}
                                 </p>
-                                <p>📍 {seminar.location}</p>
-                                <p>👥 Max. {seminar.max_participants} Teilnehmer</p>
+                                <p>Ort: {seminar.location}</p>
+                                <p>Max. Personen: {seminar.max_participants} Teilnehmer</p>
                             </div>
                         ))
                     )}
